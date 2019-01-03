@@ -20,7 +20,7 @@ class PassportController extends Controller
 
     public function store(Request $request)
     {
-        if($request->hasFile('filename')) {
+        if ($request->hasFile('filename')) {
             $file = $request->file('filename');
             $name = time() . '-' . $file->getClientOriginalName();
             $file->move(public_path() . '/images/', $name);
