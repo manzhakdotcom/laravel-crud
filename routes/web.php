@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/{name}/{id}', function ($name, $id) {
     return view('new/welcome', compact('name'))->withIdName($id);
-})->where('name', '[a-z]+');
+})->where(['name' => '[a-z]+', 'id'=>'[0-9]+']);
 
 Route::resource('passports', 'PassportController');
 
