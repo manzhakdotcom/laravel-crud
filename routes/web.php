@@ -10,9 +10,31 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Появился с 5.5
+//Route::view('/', 'welcome');
+//Route::redirect('/here1', 'passports', 301);
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/{name}/{id}', function ($name, $id) {
+    return view('new/welcome', compact('name'))->withIdName($id);
+})->where('name', '[a-z]+');
+
 Route::resource('passports', 'PassportController');
+
+//Если необязательный параметр "?"
+//Route::get('user/{id?}', function($id = null) {
+//  return 'User ' . $id;
+//});
+
+//Один из вариантов
+//Route::get('name_{id}', function($id){
+//  return 'User ' . $id;
+//});
+
+//Регулярные выражения
+//Route::get('user/{$name}', function($name){
+//  //
+//})->where('name', '[A-Za-z]+');
+
