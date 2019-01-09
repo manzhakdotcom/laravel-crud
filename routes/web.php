@@ -23,6 +23,7 @@ Route::get('/{name}/{id}', function ($name, $id) {
 
 Route::resource('passports', 'PassportController');
 
+//dd(Route::getRoutes());
 //Если необязательный параметр "?"
 //Route::get('user/{id?}', function($id = null) {
 //  return 'User ' . $id;
