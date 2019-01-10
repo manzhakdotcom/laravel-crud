@@ -13,9 +13,7 @@
 //Появился с 5.5
 //Route::view('/', 'welcome');
 //Route::redirect('/here1', 'passports', 301);
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'UsersController@index');
 
 Route::get('/{name}/{id}', function ($name, $id) {
     return view('new/welcome', compact('name'))->withIdName($id);
