@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Laravel 5.6 CRUD Tutorial With Example </title>
+    <title>Laravel 5.6 CRUD Tutorial With App </title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
