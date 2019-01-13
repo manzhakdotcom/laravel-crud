@@ -38,3 +38,4 @@ Route::resource('passports', 'PassportController');
 //  //
 //})->where('name', '[A-Za-z]+');
 
+Route::view('/react/{path?}', 'app');
