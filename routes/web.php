@@ -16,7 +16,7 @@
 
 Route::get('/', 'UsersController@index');
 
-Route::get('/{name}/{id}', function ($name, $id) {
+Route::get('/name_{name}/{id}', function ($name, $id) {
     return view('new/welcome', compact('name'))->withIdName($id);
 })->where(['name' => '[a-z]+', 'id'=>'[0-9]+']);
 
@@ -38,4 +38,8 @@ Route::resource('passports', 'PassportController');
 //  //
 //})->where('name', '[A-Za-z]+');
 
-Route::view('/react/{path?}', 'app');
+Route::view('react/{path?}', 'app');
+
+
+Route::get('authors', 'NamesController@index');
+Route::get('authors/{id}', 'NamesController@show');
